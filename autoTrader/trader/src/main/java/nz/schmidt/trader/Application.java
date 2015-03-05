@@ -8,13 +8,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableAutoConfiguration
 public class Application {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception 
+	{
 		String webPort = System.getenv("PORT");
-		if (webPort == null || webPort.isEmpty()) {
+		if (webPort == null || webPort.isEmpty()) 
+		{
 			webPort = "5000";
 		}
+		
 		System.setProperty("server.port", webPort);
-
 		SpringApplication.run(Application.class, args);
 	}
 }
