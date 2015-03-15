@@ -1,0 +1,30 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+<persistence-unit name="mysqlPU">
+    <provider>com.impetus.kundera.KunderaPersistence</provider>
+    <class>com.impetus.kundera.examples.entities.Person</class>
+    <class>com.impetus.kundera.examples.entities.Address</class>
+    <properties>
+      <property name="kundera.client.lookup.class" value="com.impetus.client.rdbms.RDBMSClientFactory" />
+      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.format_sql" value="true" />
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/hibernatepoc" />
+      <property name="hibernate.connection.username" value="root" />
+      <property name="hibernate.connection.password" value="impetus" />
+      <property name="hibernate.current_session_context_class" value="org.hibernate.context.ThreadLocalSessionContext" />
+    </properties>
+</persistence-unit>
+<persistence-unit name="cassandraPU">
+    <provider>com.impetus.kundera.KunderaPersistence</provider>
+    <properties>
+       <property name="kundera.nodes" value="serlserver2.aut.ac.nz" />
+       <property name="kundera.port" value="9160" />
+       <property name="kundera.keyspace" value="mykeyspace" />
+       <property name="kundera.dialect" value="cassandra" />
+       <property name="kundera.client.lookup.class" value="com.impetus.client.cassandra.pelops.PelopsClientFactory" />
+       <property name="kundera.cache.provider.class" value="com.impetus.kundera.cache.ehcache.EhCacheProvider" />
+       <property name="kundera.cache.config.resource" value="/ehcache-test.xml" />
+    </properties>
+</persistence-unit>
+</persistence>

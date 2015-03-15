@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="app.js"></script>
+    <script>
+        (function () 	
+{
+	var gem = {name : 'testaaa', price: 2.95};
+	var app = angular.module('gemStore', []);
+	
+	app.controller('ControllerStore', function()	
+	{
+		this.product = gem;
+	});
+})
+        
+    </script>
+    
+    
+</head>
+
+<body>
+
+<div ng-app="gemStore">
+  <p>Name: <input type="text" ng-model="name"></p>
+  <p ng-bind="name"></p>
+    
+    
+    {{"test" + "test2" + store.product.name}}
+</div>
+
+</body>
+</html> 

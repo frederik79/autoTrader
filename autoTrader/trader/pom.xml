@@ -28,6 +28,19 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
+
+		 <dependency>
+            <groupId>com.impetus.client</groupId>
+            <artifactId>kundera-cassandra</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+		<dependency>
+			<groupId>org.apache.mahout</groupId>
+			<artifactId>mahout-core</artifactId>
+			<version>0.9</version>
+		</dependency>
+
 	</dependencies>
 	<repositories>
 		<repository>
@@ -40,6 +53,28 @@
 		<repository>
 			<id>spring-milestones</id>
 			<url>http://repo.spring.io/milestone</url>
+		</repository>
+		<repository>
+			<id>sonatype-nexus</id>
+			<name>Kundera Public Repository</name>
+			<url>https://oss.sonatype.org/content/repositories/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>kundera-missing</id>
+			<name>Kundera Public Missing Resources Repository</name>
+			<url>http://kundera.googlecode.com/svn/maven2/maven-missing-resources</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
 	<pluginRepositories>
@@ -71,6 +106,14 @@
 					</archive>
 				</configuration>
 			</plugin>
+			<plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+			
 		</plugins>
 	</build>
 </project>

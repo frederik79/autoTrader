@@ -1,3 +1,8 @@
-nz\schmidt\trader\TradeRangeController.class
 nz\schmidt\trader\TradeRange.class
+nz\schmidt\trader\LoginController.class
+nz\schmidt\trader\Session.class
+nz\schmidt\trader\InterestController.class
+nz\schmidt\ml\Recommender.class
+nz\schmidt\trader\TradeRangeController.class
 nz\schmidt\trader\Application.class
+nz\schmidt\trader\SessionSingelton.class
