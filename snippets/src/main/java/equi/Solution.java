@@ -1,4 +1,4 @@
-package employertests.equi;
+package equi;
 
 import static org.junit.Assert.*;
 
